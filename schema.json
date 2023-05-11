@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://example.com/employee.schema.json",
+    "title": "Function Metadata Schema",
+    "description": "TBD",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "Function name",
+            "type": "string"
+        },
+        "entry": {
+            "description": "Entry Address",
+            "type": "string"
+        },
+        "exit": {
+            "description": "Exit Address",
+            "type": "string"
+        }, 
+        "instructions": {
+            
+        }
+
+    }
+}
