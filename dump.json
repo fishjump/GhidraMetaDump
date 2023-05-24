@@ -1,0 +1,1707 @@
+{
+    "functions": [
+        {
+            "name": "_fini",
+            "entry": "00101248",
+            "exit": "00101254",
+            "basicblocks": {
+                "0010124c": {
+                    "id": "0010124c",
+                    "entry": "0010124c",
+                    "exit": "00101254",
+                    "pcodes": [
+                        "0010124c:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "0010124c:0": {
+                    "id": "0010124c:0",
+                    "operation": "RETURN",
+                    "parent": "0010124c",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(const, 0x0, 8)"
+            ],
+            "symbols": {},
+            "cfg": {
+                "basicblocks": {
+                    "0010124c": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "0010124c:0": {
+                        "preds": [],
+                        "succs": []
+                    }
+                }
+            }
+        },
+        {
+            "name": "__libc_csu_fini",
+            "entry": "00101240",
+            "exit": "00101244",
+            "basicblocks": {
+                "00101244": {
+                    "id": "00101244",
+                    "entry": "00101244",
+                    "exit": "00101244",
+                    "pcodes": [
+                        "00101244:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "00101244:0": {
+                    "id": "00101244:0",
+                    "operation": "RETURN",
+                    "parent": "00101244",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(const, 0x0, 8)"
+            ],
+            "symbols": {},
+            "cfg": {
+                "basicblocks": {
+                    "00101244": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "00101244:0": {
+                        "preds": [],
+                        "succs": []
+                    }
+                }
+            }
+        },
+        {
+            "name": "__libc_csu_init",
+            "entry": "001011d0",
+            "exit": "00101234",
+            "basicblocks": {
+                "001011d4": {
+                    "id": "001011d4",
+                    "entry": "001011d4",
+                    "exit": "00101207",
+                    "pcodes": [
+                        "001011d4:0",
+                        "001011d4:1",
+                        "001011d4:2",
+                        "001011d4:3"
+                    ]
+                },
+                "00101210": {
+                    "id": "00101210",
+                    "entry": "00101210",
+                    "exit": "00101224",
+                    "pcodes": [
+                        "00101210:0",
+                        "00101210:1",
+                        "00101210:2",
+                        "00101210:3",
+                        "00101210:4",
+                        "00101210:5",
+                        "00101210:6",
+                        "00101210:7",
+                        "00101210:8"
+                    ]
+                },
+                "00101226": {
+                    "id": "00101226",
+                    "entry": "00101226",
+                    "exit": "00101234",
+                    "pcodes": [
+                        "00101226:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "00101210:2": {
+                    "id": "00101210:2",
+                    "operation": "PTRADD",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(unique, 0x10000072, 8)",
+                        "(register, 0x18, 8)",
+                        "(const, 0x8, 8)"
+                    ],
+                    "output": "(unique, 0x3400, 8)"
+                },
+                "00101210:1": {
+                    "id": "00101210:1",
+                    "operation": "PTRSUB",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(const, 0x0, 8)",
+                        "(const, 0x103da8, 8)"
+                    ],
+                    "output": "(unique, 0x10000072, 8)"
+                },
+                "00101210:0": {
+                    "id": "00101210:0",
+                    "operation": "MULTIEQUAL",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(register, 0x18, 8)",
+                        "(register, 0x18, 8)"
+                    ],
+                    "output": "(register, 0x18, 8)"
+                },
+                "00101210:6": {
+                    "id": "00101210:6",
+                    "operation": "INT_ADD",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(register, 0x18, 8)",
+                        "(const, 0x1, 8)"
+                    ],
+                    "output": "(register, 0x18, 8)"
+                },
+                "00101210:5": {
+                    "id": "00101210:5",
+                    "operation": "CALLIND",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(unique, 0x1000008a, 8)",
+                        "(register, 0xa0, 8)",
+                        "(register, 0x30, 8)",
+                        "(register, 0x10, 8)"
+                    ]
+                },
+                "00101210:4": {
+                    "id": "00101210:4",
+                    "operation": "CAST",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(unique, 0xc280, 8)"
+                    ],
+                    "output": "(unique, 0x1000008a, 8)"
+                },
+                "00101210:3": {
+                    "id": "00101210:3",
+                    "operation": "LOAD",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(const, 0x1b1, 4)",
+                        "(unique, 0x3400, 8)"
+                    ],
+                    "output": "(unique, 0xc280, 8)"
+                },
+                "00101210:8": {
+                    "id": "00101210:8",
+                    "operation": "CBRANCH",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(ram, 0x101210, 1)",
+                        "(register, 0x206, 1)"
+                    ]
+                },
+                "00101226:0": {
+                    "id": "00101226:0",
+                    "operation": "RETURN",
+                    "parent": "00101226",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                },
+                "00101210:7": {
+                    "id": "00101210:7",
+                    "operation": "INT_NOTEQUAL",
+                    "parent": "00101210",
+                    "inputs": [
+                        "(register, 0x18, 8)",
+                        "(const, 0x1, 8)"
+                    ],
+                    "output": "(register, 0x206, 1)"
+                },
+                "001011d4:3": {
+                    "id": "001011d4:3",
+                    "operation": "COPY",
+                    "parent": "001011d4",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ],
+                    "output": "(register, 0x18, 8)"
+                },
+                "001011d4:0": {
+                    "id": "001011d4:0",
+                    "operation": "CAST",
+                    "parent": "001011d4",
+                    "inputs": [
+                        "(register, 0x38, 8)"
+                    ],
+                    "output": "(unique, 0x10000082, 8)"
+                },
+                "001011d4:1": {
+                    "id": "001011d4:1",
+                    "operation": "INT_AND",
+                    "parent": "001011d4",
+                    "inputs": [
+                        "(unique, 0x10000082, 8)",
+                        "(const, 0xffffffff, 8)"
+                    ],
+                    "output": "(register, 0xa0, 8)"
+                },
+                "001011d4:2": {
+                    "id": "001011d4:2",
+                    "operation": "CALL",
+                    "parent": "001011d4",
+                    "inputs": [
+                        "(ram, 0x101000, 8)",
+                        "(register, 0x38, 8)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(register, 0x30, 8)",
+                "(const, 0x1b1, 4)",
+                "(register, 0x18, 8)",
+                "(unique, 0x3400, 8)",
+                "(const, 0x1, 8)",
+                "(register, 0x38, 8)",
+                "(const, 0xffffffff, 8)",
+                "(unique, 0x10000082, 8)",
+                "(unique, 0xc280, 8)",
+                "(register, 0x206, 1)",
+                "(register, 0xa0, 8)",
+                "(ram, 0x101210, 1)",
+                "(register, 0x10, 8)",
+                "(const, 0x0, 8)",
+                "(ram, 0x101000, 8)",
+                "(unique, 0x10000072, 8)",
+                "(unique, 0x1000008a, 8)",
+                "(const, 0x103da8, 8)",
+                "(const, 0x8, 8)"
+            ],
+            "symbols": {
+                "param_2": {
+                    "id": "param_2",
+                    "dataType": "undefined8",
+                    "length": 8,
+                    "isPointer": false,
+                    "representative": "(register, 0x30, 8)"
+                },
+                "param_3": {
+                    "id": "param_3",
+                    "dataType": "undefined8",
+                    "length": 8,
+                    "isPointer": false,
+                    "representative": "(register, 0x10, 8)"
+                },
+                "param_1": {
+                    "id": "param_1",
+                    "dataType": "EVP_PKEY_CTX *",
+                    "length": 8,
+                    "isPointer": true,
+                    "representative": "(register, 0x38, 8)"
+                },
+                "lVar1": {
+                    "id": "lVar1",
+                    "dataType": "long",
+                    "length": 8,
+                    "isPointer": false,
+                    "representative": "(register, 0x18, 8)"
+                },
+                "__frame_dummy_init_array_entry": {
+                    "id": "__frame_dummy_init_array_entry",
+                    "dataType": "pointer",
+                    "length": 8,
+                    "isPointer": true
+                }
+            },
+            "cfg": {
+                "basicblocks": {
+                    "001011d4": {
+                        "preds": [],
+                        "succs": [
+                            "00101210"
+                        ]
+                    },
+                    "00101210": {
+                        "preds": [
+                            "001011d4",
+                            "00101210"
+                        ],
+                        "succs": [
+                            "00101226",
+                            "00101210"
+                        ]
+                    },
+                    "00101226": {
+                        "preds": [
+                            "00101210"
+                        ],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "00101210:2": {
+                        "preds": [
+                            "00101210:1"
+                        ],
+                        "succs": [
+                            "00101210:3"
+                        ]
+                    },
+                    "00101210:1": {
+                        "preds": [
+                            "00101210:0"
+                        ],
+                        "succs": [
+                            "00101210:2"
+                        ]
+                    },
+                    "00101210:0": {
+                        "preds": [
+                            "001011d4:3",
+                            "00101210:8"
+                        ],
+                        "succs": [
+                            "00101210:1"
+                        ]
+                    },
+                    "00101210:6": {
+                        "preds": [
+                            "00101210:5"
+                        ],
+                        "succs": [
+                            "00101210:7"
+                        ]
+                    },
+                    "00101210:5": {
+                        "preds": [
+                            "00101210:4"
+                        ],
+                        "succs": [
+                            "00101210:6"
+                        ]
+                    },
+                    "00101210:4": {
+                        "preds": [
+                            "00101210:3"
+                        ],
+                        "succs": [
+                            "00101210:5"
+                        ]
+                    },
+                    "00101210:3": {
+                        "preds": [
+                            "00101210:2"
+                        ],
+                        "succs": [
+                            "00101210:4"
+                        ]
+                    },
+                    "00101210:8": {
+                        "preds": [
+                            "00101210:7"
+                        ],
+                        "succs": [
+                            "00101226:0",
+                            "00101210:0"
+                        ]
+                    },
+                    "00101226:0": {
+                        "preds": [
+                            "00101210:8"
+                        ],
+                        "succs": []
+                    },
+                    "00101210:7": {
+                        "preds": [
+                            "00101210:6"
+                        ],
+                        "succs": [
+                            "00101210:8"
+                        ]
+                    },
+                    "001011d4:3": {
+                        "preds": [
+                            "001011d4:2"
+                        ],
+                        "succs": [
+                            "00101210:0"
+                        ]
+                    },
+                    "001011d4:0": {
+                        "preds": [],
+                        "succs": [
+                            "001011d4:1"
+                        ]
+                    },
+                    "001011d4:1": {
+                        "preds": [
+                            "001011d4:0"
+                        ],
+                        "succs": [
+                            "001011d4:2"
+                        ]
+                    },
+                    "001011d4:2": {
+                        "preds": [
+                            "001011d4:1"
+                        ],
+                        "succs": [
+                            "001011d4:3"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "main",
+            "entry": "0010117b",
+            "exit": "001011c2",
+            "basicblocks": {
+                "0010117f": {
+                    "id": "0010117f",
+                    "entry": "0010117f",
+                    "exit": "001011a4",
+                    "pcodes": [
+                        "0010117f:0",
+                        "0010117f:1",
+                        "0010117f:2",
+                        "0010117f:3",
+                        "0010117f:4"
+                    ]
+                },
+                "001011b2": {
+                    "id": "001011b2",
+                    "entry": "001011b2",
+                    "exit": "001011b7",
+                    "pcodes": [
+                        "001011b2:0",
+                        "001011b2:1"
+                    ]
+                },
+                "001011a6": {
+                    "id": "001011a6",
+                    "entry": "001011a6",
+                    "exit": "001011b0",
+                    "pcodes": [
+                        "001011a6:0",
+                        "001011a6:1",
+                        "001011a6:2"
+                    ]
+                },
+                "001011bc": {
+                    "id": "001011bc",
+                    "entry": "001011bc",
+                    "exit": "001011c2",
+                    "pcodes": [
+                        "001011bc:0",
+                        "001011bc:1"
+                    ]
+                }
+            },
+            "pcodes": {
+                "001011a6:1": {
+                    "id": "001011a6:1",
+                    "operation": "CALL",
+                    "parent": "001011a6",
+                    "inputs": [
+                        "(ram, 0x101162, 8)"
+                    ]
+                },
+                "0010117f:4": {
+                    "id": "0010117f:4",
+                    "operation": "CBRANCH",
+                    "parent": "0010117f",
+                    "inputs": [
+                        "(ram, 0x1011b2, 1)",
+                        "(register, 0x206, 1)"
+                    ]
+                },
+                "001011a6:0": {
+                    "id": "001011a6:0",
+                    "operation": "CALL",
+                    "parent": "001011a6",
+                    "inputs": [
+                        "(ram, 0x101149, 8)"
+                    ]
+                },
+                "001011a6:2": {
+                    "id": "001011a6:2",
+                    "operation": "BRANCH",
+                    "parent": "001011a6",
+                    "inputs": [
+                        "(ram, 0x1011bc, 1)"
+                    ]
+                },
+                "001011bc:0": {
+                    "id": "001011bc:0",
+                    "operation": "COPY",
+                    "parent": "001011bc",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ],
+                    "output": "(register, 0x0, 8)"
+                },
+                "001011bc:1": {
+                    "id": "001011bc:1",
+                    "operation": "RETURN",
+                    "parent": "001011bc",
+                    "inputs": [
+                        "(const, 0x0, 8)",
+                        "(register, 0x0, 8)"
+                    ]
+                },
+                "0010117f:1": {
+                    "id": "0010117f:1",
+                    "operation": "CAST",
+                    "parent": "0010117f",
+                    "inputs": [
+                        "(unique, 0x1000006d, 8)"
+                    ],
+                    "output": "(register, 0x0, 8)"
+                },
+                "0010117f:0": {
+                    "id": "0010117f:0",
+                    "operation": "CALL",
+                    "parent": "0010117f",
+                    "inputs": [
+                        "(ram, 0x101050, 8)",
+                        "(const, 0x4, 8)"
+                    ],
+                    "output": "(unique, 0x1000006d, 8)"
+                },
+                "001011b2:1": {
+                    "id": "001011b2:1",
+                    "operation": "CALL",
+                    "parent": "001011b2",
+                    "inputs": [
+                        "(ram, 0x101162, 8)"
+                    ]
+                },
+                "0010117f:3": {
+                    "id": "0010117f:3",
+                    "operation": "INT_EQUAL",
+                    "parent": "0010117f",
+                    "inputs": [
+                        "(register, 0x0, 8)",
+                        "(const, 0x0, 8)"
+                    ],
+                    "output": "(register, 0x206, 1)"
+                },
+                "001011b2:0": {
+                    "id": "001011b2:0",
+                    "operation": "CALL",
+                    "parent": "001011b2",
+                    "inputs": [
+                        "(ram, 0x101149, 8)"
+                    ]
+                },
+                "0010117f:2": {
+                    "id": "0010117f:2",
+                    "operation": "STORE",
+                    "parent": "0010117f",
+                    "inputs": [
+                        "(const, 0x1b1, 4)",
+                        "(register, 0x0, 8)",
+                        "(const, 0xa, 4)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(register, 0x206, 1)",
+                "(const, 0x4, 8)",
+                "(const, 0x1b1, 4)",
+                "(ram, 0x101050, 8)",
+                "(register, 0x0, 8)",
+                "(const, 0x0, 8)",
+                "(const, 0xa, 4)",
+                "(ram, 0x1011bc, 1)",
+                "(unique, 0x1000006d, 8)",
+                "(ram, 0x101149, 8)",
+                "(ram, 0x101162, 8)",
+                "(ram, 0x1011b2, 1)"
+            ],
+            "symbols": {
+                "puVar1": {
+                    "id": "puVar1",
+                    "dataType": "undefined4 *",
+                    "length": 8,
+                    "isPointer": true,
+                    "representative": "(register, 0x0, 8)"
+                }
+            },
+            "cfg": {
+                "basicblocks": {
+                    "0010117f": {
+                        "preds": [],
+                        "succs": [
+                            "001011a6",
+                            "001011b2"
+                        ]
+                    },
+                    "001011b2": {
+                        "preds": [
+                            "0010117f"
+                        ],
+                        "succs": [
+                            "001011bc"
+                        ]
+                    },
+                    "001011a6": {
+                        "preds": [
+                            "0010117f"
+                        ],
+                        "succs": [
+                            "001011bc"
+                        ]
+                    },
+                    "001011bc": {
+                        "preds": [
+                            "001011a6",
+                            "001011b2"
+                        ],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "001011a6:1": {
+                        "preds": [
+                            "001011a6:0"
+                        ],
+                        "succs": [
+                            "001011a6:2"
+                        ]
+                    },
+                    "0010117f:4": {
+                        "preds": [
+                            "0010117f:3"
+                        ],
+                        "succs": [
+                            "001011a6:0",
+                            "001011b2:0"
+                        ]
+                    },
+                    "001011a6:0": {
+                        "preds": [
+                            "0010117f:4"
+                        ],
+                        "succs": [
+                            "001011a6:1"
+                        ]
+                    },
+                    "001011a6:2": {
+                        "preds": [
+                            "001011a6:1"
+                        ],
+                        "succs": [
+                            "001011bc:0"
+                        ]
+                    },
+                    "001011bc:0": {
+                        "preds": [
+                            "001011a6:2",
+                            "001011b2:1"
+                        ],
+                        "succs": [
+                            "001011bc:1"
+                        ]
+                    },
+                    "001011bc:1": {
+                        "preds": [
+                            "001011bc:0"
+                        ],
+                        "succs": []
+                    },
+                    "0010117f:1": {
+                        "preds": [
+                            "0010117f:0"
+                        ],
+                        "succs": [
+                            "0010117f:2"
+                        ]
+                    },
+                    "0010117f:0": {
+                        "preds": [],
+                        "succs": [
+                            "0010117f:1"
+                        ]
+                    },
+                    "001011b2:1": {
+                        "preds": [
+                            "001011b2:0"
+                        ],
+                        "succs": [
+                            "001011bc:0"
+                        ]
+                    },
+                    "0010117f:3": {
+                        "preds": [
+                            "0010117f:2"
+                        ],
+                        "succs": [
+                            "0010117f:4"
+                        ]
+                    },
+                    "001011b2:0": {
+                        "preds": [
+                            "0010117f:4"
+                        ],
+                        "succs": [
+                            "001011b2:1"
+                        ]
+                    },
+                    "0010117f:2": {
+                        "preds": [
+                            "0010117f:1"
+                        ],
+                        "succs": [
+                            "0010117f:3"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "bar",
+            "entry": "00101162",
+            "exit": "0010117a",
+            "basicblocks": {
+                "00101166": {
+                    "id": "00101166",
+                    "entry": "00101166",
+                    "exit": "0010117a",
+                    "pcodes": [
+                        "00101166:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "00101166:0": {
+                    "id": "00101166:0",
+                    "operation": "RETURN",
+                    "parent": "00101166",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(const, 0x0, 8)"
+            ],
+            "symbols": {},
+            "cfg": {
+                "basicblocks": {
+                    "00101166": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "00101166:0": {
+                        "preds": [],
+                        "succs": []
+                    }
+                }
+            }
+        },
+        {
+            "name": "foo",
+            "entry": "00101149",
+            "exit": "00101161",
+            "basicblocks": {
+                "0010114d": {
+                    "id": "0010114d",
+                    "entry": "0010114d",
+                    "exit": "00101161",
+                    "pcodes": [
+                        "0010114d:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "0010114d:0": {
+                    "id": "0010114d:0",
+                    "operation": "RETURN",
+                    "parent": "0010114d",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(const, 0x0, 8)"
+            ],
+            "symbols": {},
+            "cfg": {
+                "basicblocks": {
+                    "0010114d": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "0010114d:0": {
+                        "preds": [],
+                        "succs": []
+                    }
+                }
+            }
+        },
+        {
+            "name": "__do_global_dtors_aux",
+            "entry": "00101100",
+            "exit": "00101138",
+            "basicblocks": {
+                "00101138": {
+                    "id": "00101138",
+                    "entry": "00101138",
+                    "exit": "00101138",
+                    "pcodes": [
+                        "00101138:0",
+                        "00101138:1",
+                        "00101138:2"
+                    ]
+                },
+                "00101104": {
+                    "id": "00101104",
+                    "entry": "00101104",
+                    "exit": "0010110b",
+                    "pcodes": [
+                        "00101104:0",
+                        "00101104:1"
+                    ]
+                },
+                "0010110d": {
+                    "id": "0010110d",
+                    "entry": "0010110d",
+                    "exit": "00101134",
+                    "pcodes": [
+                        "0010110d:0",
+                        "0010110d:1",
+                        "0010110d:2",
+                        "0010110d:3",
+                        "0010110d:4",
+                        "0010110d:5",
+                        "0010110d:6",
+                        "0010110d:7",
+                        "0010110d:8",
+                        "0010110d:9"
+                    ]
+                }
+            },
+            "pcodes": {
+                "0010110d:4": {
+                    "id": "0010110d:4",
+                    "operation": "INDIRECT",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x104010, 1)",
+                        "(const, 0x1f, 4)"
+                    ],
+                    "output": "(ram, 0x104010, 1)"
+                },
+                "0010110d:3": {
+                    "id": "0010110d:3",
+                    "operation": "INDIRECT",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x104008, 8)",
+                        "(const, 0x1f, 4)"
+                    ],
+                    "output": "(ram, 0x104008, 8)"
+                },
+                "0010110d:6": {
+                    "id": "0010110d:6",
+                    "operation": "COPY",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(const, 0x1, 1)"
+                    ],
+                    "output": "(ram, 0x104010, 1)"
+                },
+                "0010110d:5": {
+                    "id": "0010110d:5",
+                    "operation": "CALL",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x101090, 8)"
+                    ]
+                },
+                "0010110d:0": {
+                    "id": "0010110d:0",
+                    "operation": "INDIRECT",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x104008, 8)",
+                        "(const, 0x1c, 4)"
+                    ],
+                    "output": "(ram, 0x104008, 8)"
+                },
+                "0010110d:2": {
+                    "id": "0010110d:2",
+                    "operation": "CALL",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x101040, 8)",
+                        "(ram, 0x104008, 8)"
+                    ]
+                },
+                "0010110d:1": {
+                    "id": "0010110d:1",
+                    "operation": "INDIRECT",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x104010, 1)",
+                        "(const, 0x1c, 4)"
+                    ],
+                    "output": "(ram, 0x104010, 1)"
+                },
+                "0010110d:8": {
+                    "id": "0010110d:8",
+                    "operation": "COPY",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x104010, 1)"
+                    ],
+                    "output": "(ram, 0x104010, 1)"
+                },
+                "0010110d:7": {
+                    "id": "0010110d:7",
+                    "operation": "COPY",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(ram, 0x104008, 8)"
+                    ],
+                    "output": "(ram, 0x104008, 8)"
+                },
+                "0010110d:9": {
+                    "id": "0010110d:9",
+                    "operation": "RETURN",
+                    "parent": "0010110d",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                },
+                "00101138:2": {
+                    "id": "00101138:2",
+                    "operation": "RETURN",
+                    "parent": "00101138",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                },
+                "00101104:0": {
+                    "id": "00101104:0",
+                    "operation": "INT_NOTEQUAL",
+                    "parent": "00101104",
+                    "inputs": [
+                        "(ram, 0x104010, 1)",
+                        "(const, 0x0, 1)"
+                    ],
+                    "output": "(register, 0x206, 1)"
+                },
+                "00101138:0": {
+                    "id": "00101138:0",
+                    "operation": "COPY",
+                    "parent": "00101138",
+                    "inputs": [
+                        "(ram, 0x104008, 8)"
+                    ],
+                    "output": "(ram, 0x104008, 8)"
+                },
+                "00101138:1": {
+                    "id": "00101138:1",
+                    "operation": "COPY",
+                    "parent": "00101138",
+                    "inputs": [
+                        "(ram, 0x104010, 1)"
+                    ],
+                    "output": "(ram, 0x104010, 1)"
+                },
+                "00101104:1": {
+                    "id": "00101104:1",
+                    "operation": "CBRANCH",
+                    "parent": "00101104",
+                    "inputs": [
+                        "(ram, 0x101138, 1)",
+                        "(register, 0x206, 1)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(register, 0x206, 1)",
+                "(ram, 0x101138, 1)",
+                "(const, 0x1, 1)",
+                "(ram, 0x101040, 8)",
+                "(const, 0x1c, 4)",
+                "(ram, 0x101090, 8)",
+                "(const, 0x0, 8)",
+                "(ram, 0x104008, 8)",
+                "(ram, 0x104010, 1)",
+                "(const, 0x0, 1)",
+                "(const, 0x1f, 4)"
+            ],
+            "symbols": {
+                "completed.8061": {
+                    "id": "completed.8061",
+                    "dataType": "char",
+                    "length": 1,
+                    "isPointer": false,
+                    "representative": "(ram, 0x104010, 1)"
+                },
+                "__dso_handle": {
+                    "id": "__dso_handle",
+                    "dataType": "undefined *",
+                    "length": 8,
+                    "isPointer": true,
+                    "representative": "(ram, 0x104008, 8)"
+                }
+            },
+            "cfg": {
+                "basicblocks": {
+                    "00101138": {
+                        "preds": [
+                            "00101104"
+                        ],
+                        "succs": []
+                    },
+                    "00101104": {
+                        "preds": [],
+                        "succs": [
+                            "0010110d",
+                            "00101138"
+                        ]
+                    },
+                    "0010110d": {
+                        "preds": [
+                            "00101104"
+                        ],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "0010110d:4": {
+                        "preds": [
+                            "0010110d:3"
+                        ],
+                        "succs": [
+                            "0010110d:5"
+                        ]
+                    },
+                    "0010110d:3": {
+                        "preds": [
+                            "0010110d:2"
+                        ],
+                        "succs": [
+                            "0010110d:4"
+                        ]
+                    },
+                    "0010110d:6": {
+                        "preds": [
+                            "0010110d:5"
+                        ],
+                        "succs": [
+                            "0010110d:7"
+                        ]
+                    },
+                    "0010110d:5": {
+                        "preds": [
+                            "0010110d:4"
+                        ],
+                        "succs": [
+                            "0010110d:6"
+                        ]
+                    },
+                    "0010110d:0": {
+                        "preds": [
+                            "00101104:1"
+                        ],
+                        "succs": [
+                            "0010110d:1"
+                        ]
+                    },
+                    "0010110d:2": {
+                        "preds": [
+                            "0010110d:1"
+                        ],
+                        "succs": [
+                            "0010110d:3"
+                        ]
+                    },
+                    "0010110d:1": {
+                        "preds": [
+                            "0010110d:0"
+                        ],
+                        "succs": [
+                            "0010110d:2"
+                        ]
+                    },
+                    "0010110d:8": {
+                        "preds": [
+                            "0010110d:7"
+                        ],
+                        "succs": [
+                            "0010110d:9"
+                        ]
+                    },
+                    "0010110d:7": {
+                        "preds": [
+                            "0010110d:6"
+                        ],
+                        "succs": [
+                            "0010110d:8"
+                        ]
+                    },
+                    "0010110d:9": {
+                        "preds": [
+                            "0010110d:8"
+                        ],
+                        "succs": []
+                    },
+                    "00101138:2": {
+                        "preds": [
+                            "00101138:1"
+                        ],
+                        "succs": []
+                    },
+                    "00101104:0": {
+                        "preds": [],
+                        "succs": [
+                            "00101104:1"
+                        ]
+                    },
+                    "00101138:0": {
+                        "preds": [
+                            "00101104:1"
+                        ],
+                        "succs": [
+                            "00101138:1"
+                        ]
+                    },
+                    "00101138:1": {
+                        "preds": [
+                            "00101138:0"
+                        ],
+                        "succs": [
+                            "00101138:2"
+                        ]
+                    },
+                    "00101104:1": {
+                        "preds": [
+                            "00101104:0"
+                        ],
+                        "succs": [
+                            "0010110d:0",
+                            "00101138:0"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "register_tm_clones",
+            "entry": "001010c0",
+            "exit": "001010f8",
+            "basicblocks": {
+                "001010c0": {
+                    "id": "001010c0",
+                    "entry": "001010c0",
+                    "exit": "001010f8",
+                    "pcodes": [
+                        "001010c0:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "001010c0:0": {
+                    "id": "001010c0:0",
+                    "operation": "RETURN",
+                    "parent": "001010c0",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(const, 0x0, 8)"
+            ],
+            "symbols": {},
+            "cfg": {
+                "basicblocks": {
+                    "001010c0": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "001010c0:0": {
+                        "preds": [],
+                        "succs": []
+                    }
+                }
+            }
+        },
+        {
+            "name": "deregister_tm_clones",
+            "entry": "00101090",
+            "exit": "001010b8",
+            "basicblocks": {
+                "00101090": {
+                    "id": "00101090",
+                    "entry": "00101090",
+                    "exit": "001010b8",
+                    "pcodes": [
+                        "00101090:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "00101090:0": {
+                    "id": "00101090:0",
+                    "operation": "RETURN",
+                    "parent": "00101090",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(const, 0x0, 8)"
+            ],
+            "symbols": {},
+            "cfg": {
+                "basicblocks": {
+                    "00101090": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "00101090:0": {
+                        "preds": [],
+                        "succs": []
+                    }
+                }
+            }
+        },
+        {
+            "name": "_start",
+            "entry": "00101060",
+            "exit": "0010108e",
+            "basicblocks": {
+                "00101064": {
+                    "id": "00101064",
+                    "entry": "00101064",
+                    "exit": "00101088",
+                    "pcodes": [
+                        "00101064:0",
+                        "00101064:1",
+                        "00101064:2",
+                        "00101064:3",
+                        "00101064:4",
+                        "00101064:5"
+                    ]
+                },
+                "0010108e": {
+                    "id": "0010108e",
+                    "entry": "0010108e",
+                    "exit": "0010108e",
+                    "pcodes": [
+                        "0010108e:0"
+                    ]
+                }
+            },
+            "pcodes": {
+                "00101064:1": {
+                    "id": "00101064:1",
+                    "operation": "PTRSUB",
+                    "parent": "00101064",
+                    "inputs": [
+                        "(register, 0x20, 8)",
+                        "(const, 0xfffffffffffffff8, 8)"
+                    ],
+                    "output": "(register, 0x20, 8)"
+                },
+                "0010108e:0": {
+                    "id": "0010108e:0",
+                    "operation": "BRANCH",
+                    "parent": "0010108e",
+                    "inputs": [
+                        "(ram, 0x10108e, 1)"
+                    ]
+                },
+                "00101064:0": {
+                    "id": "00101064:0",
+                    "operation": "PTRSUB",
+                    "parent": "00101064",
+                    "inputs": [
+                        "(register, 0x20, 8)",
+                        "(const, 0x8, 8)"
+                    ],
+                    "output": "(register, 0x20, 8)"
+                },
+                "00101064:3": {
+                    "id": "00101064:3",
+                    "operation": "PTRSUB",
+                    "parent": "00101064",
+                    "inputs": [
+                        "(const, 0x0, 8)",
+                        "(const, 0x1011d0, 8)"
+                    ],
+                    "output": "(unique, 0x10000029, 8)"
+                },
+                "00101064:2": {
+                    "id": "00101064:2",
+                    "operation": "PTRSUB",
+                    "parent": "00101064",
+                    "inputs": [
+                        "(const, 0x0, 8)",
+                        "(const, 0x10117b, 8)"
+                    ],
+                    "output": "(unique, 0x10000021, 8)"
+                },
+                "00101064:5": {
+                    "id": "00101064:5",
+                    "operation": "CALL",
+                    "parent": "00101064",
+                    "inputs": [
+                        "(ram, 0x105010, 8)",
+                        "(unique, 0x10000021, 8)",
+                        "(stack, 0x0, 8)",
+                        "(register, 0x20, 8)",
+                        "(unique, 0x10000029, 8)",
+                        "(unique, 0x10000031, 8)",
+                        "(register, 0x10, 8)",
+                        "(register, 0x20, 8)"
+                    ]
+                },
+                "00101064:4": {
+                    "id": "00101064:4",
+                    "operation": "PTRSUB",
+                    "parent": "00101064",
+                    "inputs": [
+                        "(const, 0x0, 8)",
+                        "(const, 0x101240, 8)"
+                    ],
+                    "output": "(unique, 0x10000031, 8)"
+                }
+            },
+            "varnodes": [
+                "(unique, 0x10000021, 8)",
+                "(const, 0x10117b, 8)",
+                "(unique, 0x10000029, 8)",
+                "(const, 0x1011d0, 8)",
+                "(const, 0x101240, 8)",
+                "(const, 0xfffffffffffffff8, 8)",
+                "(register, 0x10, 8)",
+                "(const, 0x0, 8)",
+                "(ram, 0x105010, 8)",
+                "(ram, 0x10108e, 1)",
+                "(stack, 0x0, 8)",
+                "(unique, 0x10000031, 8)",
+                "(register, 0x20, 8)",
+                "(const, 0x8, 8)"
+            ],
+            "symbols": {
+                "__libc_csu_init": {
+                    "id": "__libc_csu_init",
+                    "dataType": "undefined",
+                    "length": 1,
+                    "isPointer": false
+                },
+                "__libc_csu_fini": {
+                    "id": "__libc_csu_fini",
+                    "dataType": "undefined",
+                    "length": 1,
+                    "isPointer": false
+                },
+                "param_2": {
+                    "id": "param_2",
+                    "dataType": "undefined8",
+                    "length": 8,
+                    "isPointer": false,
+                    "representative": "(stack, 0x0, 8)"
+                },
+                "auStack_8": {
+                    "id": "auStack_8",
+                    "dataType": "undefined[8]",
+                    "length": 8,
+                    "isPointer": false
+                },
+                "main": {
+                    "id": "main",
+                    "dataType": "undefined",
+                    "length": 1,
+                    "isPointer": false
+                },
+                "param_1": {
+                    "id": "param_1",
+                    "dataType": "undefined8",
+                    "length": 8,
+                    "isPointer": false,
+                    "representative": "(register, 0x10, 8)"
+                }
+            },
+            "cfg": {
+                "basicblocks": {
+                    "00101064": {
+                        "preds": [],
+                        "succs": [
+                            "0010108e"
+                        ]
+                    },
+                    "0010108e": {
+                        "preds": [
+                            "00101064",
+                            "0010108e"
+                        ],
+                        "succs": [
+                            "0010108e"
+                        ]
+                    }
+                },
+                "pcodes": {
+                    "00101064:1": {
+                        "preds": [
+                            "00101064:0"
+                        ],
+                        "succs": [
+                            "00101064:2"
+                        ]
+                    },
+                    "0010108e:0": {
+                        "preds": [
+                            "00101064:5",
+                            "0010108e:0"
+                        ],
+                        "succs": [
+                            "0010108e:0"
+                        ]
+                    },
+                    "00101064:0": {
+                        "preds": [],
+                        "succs": [
+                            "00101064:1"
+                        ]
+                    },
+                    "00101064:3": {
+                        "preds": [
+                            "00101064:2"
+                        ],
+                        "succs": [
+                            "00101064:4"
+                        ]
+                    },
+                    "00101064:2": {
+                        "preds": [
+                            "00101064:1"
+                        ],
+                        "succs": [
+                            "00101064:3"
+                        ]
+                    },
+                    "00101064:5": {
+                        "preds": [
+                            "00101064:4"
+                        ],
+                        "succs": [
+                            "0010108e:0"
+                        ]
+                    },
+                    "00101064:4": {
+                        "preds": [
+                            "00101064:3"
+                        ],
+                        "succs": [
+                            "00101064:5"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "FUN_00101020",
+            "entry": "00101020",
+            "exit": "0010102c",
+            "basicblocks": {
+                "00101020": {
+                    "id": "00101020",
+                    "entry": "00101020",
+                    "exit": "00101026",
+                    "pcodes": [
+                        "00101020:0",
+                        "00101020:1",
+                        "00101020:2"
+                    ]
+                }
+            },
+            "pcodes": {
+                "00101020:0": {
+                    "id": "00101020:0",
+                    "operation": "CAST",
+                    "parent": "00101020",
+                    "inputs": [
+                        "(const, 0x0, 8)"
+                    ],
+                    "output": "(unique, 0x10000011, 8)"
+                },
+                "00101020:1": {
+                    "id": "00101020:1",
+                    "operation": "CALLIND",
+                    "parent": "00101020",
+                    "inputs": [
+                        "(unique, 0x10000011, 8)"
+                    ]
+                },
+                "00101020:2": {
+                    "id": "00101020:2",
+                    "operation": "RETURN",
+                    "parent": "00101020",
+                    "inputs": [
+                        "(const, 0x1, 4)"
+                    ]
+                }
+            },
+            "varnodes": [
+                "(const, 0x1, 4)",
+                "(const, 0x0, 8)",
+                "(unique, 0x10000011, 8)"
+            ],
+            "symbols": {},
+            "cfg": {
+                "basicblocks": {
+                    "00101020": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "00101020:0": {
+                        "preds": [],
+                        "succs": [
+                            "00101020:1"
+                        ]
+                    },
+                    "00101020:1": {
+                        "preds": [
+                            "00101020:0"
+                        ],
+                        "succs": [
+                            "00101020:2"
+                        ]
+                    },
+                    "00101020:2": {
+                        "preds": [
+                            "00101020:1"
+                        ],
+                        "succs": []
+                    }
+                }
+            }
+        },
+        {
+            "name": "_init",
+            "entry": "00101000",
+            "exit": "0010101a",
+            "basicblocks": {
+                "00101004": {
+                    "id": "00101004",
+                    "entry": "00101004",
+                    "exit": "0010101a",
+                    "pcodes": [
+                        "00101004:0",
+                        "00101004:1",
+                        "00101004:2"
+                    ]
+                }
+            },
+            "pcodes": {
+                "00101004:2": {
+                    "id": "00101004:2",
+                    "operation": "RETURN",
+                    "parent": "00101004",
+                    "inputs": [
+                        "(const, 0x0, 8)",
+                        "(register, 0x0, 4)"
+                    ]
+                },
+                "00101004:1": {
+                    "id": "00101004:1",
+                    "operation": "COPY",
+                    "parent": "00101004",
+                    "inputs": [
+                        "(register, 0x0, 4)"
+                    ],
+                    "output": "(register, 0x0, 4)"
+                },
+                "00101004:0": {
+                    "id": "00101004:0",
+                    "operation": "CALL",
+                    "parent": "00101004",
+                    "inputs": [
+                        "(ram, 0x105018, 8)"
+                    ],
+                    "output": "(register, 0x0, 4)"
+                }
+            },
+            "varnodes": [
+                "(const, 0x0, 8)",
+                "(register, 0x0, 4)",
+                "(ram, 0x105018, 8)"
+            ],
+            "symbols": {
+                "iVar1": {
+                    "id": "iVar1",
+                    "dataType": "int",
+                    "length": 4,
+                    "isPointer": false,
+                    "representative": "(register, 0x0, 4)"
+                },
+                "ctx": {
+                    "id": "ctx",
+                    "dataType": "EVP_PKEY_CTX *",
+                    "length": 8,
+                    "isPointer": true,
+                    "representative": "(register, 0x38, 8)"
+                }
+            },
+            "cfg": {
+                "basicblocks": {
+                    "00101004": {
+                        "preds": [],
+                        "succs": []
+                    }
+                },
+                "pcodes": {
+                    "00101004:2": {
+                        "preds": [
+                            "00101004:1"
+                        ],
+                        "succs": []
+                    },
+                    "00101004:1": {
+                        "preds": [
+                            "00101004:0"
+                        ],
+                        "succs": [
+                            "00101004:2"
+                        ]
+                    },
+                    "00101004:0": {
+                        "preds": [],
+                        "succs": [
+                            "00101004:1"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

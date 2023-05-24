@@ -4,5 +4,6 @@
         "/opt/ghidra/**/*.jar",
         "/usr/local/Caskroom/ghidra/10.2.3-20230208/ghidra_10.2.3_PUBLIC/Ghidra/**/*.jar",
         "/opt/ghidra/Ghidra/**/*.jar",
+        "C:\\Program Files\\ghidra_10.3_PUBLIC\\Ghidra\\**\\*.jar",
     ]
 }
