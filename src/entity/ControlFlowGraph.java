@@ -64,8 +64,10 @@ public class ControlFlowGraph {
                 for (int i = 0; i < current.getInSize(); i++) {
                     var pred = current.getIn(i);
                     var predBlockPcodes = ctx.basicblocks.get(pred.getStart().toString()).pcodes;
-                    var predLast = predBlockPcodes.get(predBlockPcodes.size() - 1);
-                    preds.add(predLast);
+                    if (predBlockPcodes.size() > 0) {
+                        var predLast = predBlockPcodes.get(predBlockPcodes.size() - 1);
+                        preds.add(predLast);
+                    }
                 }
             }
 
@@ -77,8 +79,10 @@ public class ControlFlowGraph {
                 for (int i = 0; i < current.getOutSize(); i++) {
                     var succ = current.getOut(i);
                     var succBlockPcodes = ctx.basicblocks.get(succ.getStart().toString()).pcodes;
-                    var succLast = succBlockPcodes.get(0);
-                    succs.add(succLast);
+                    if (succBlockPcodes.size() > 0) {
+                        var succLast = succBlockPcodes.get(0);
+                        succs.add(succLast);
+                    }
                 }
             }
         }
